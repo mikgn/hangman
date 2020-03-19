@@ -13,20 +13,20 @@ class ConsoleInterface
 
   def print_game_status
     puts <<~END
-      Слово: #{print_word_status}
+      Word: #{print_word_status}
 
       #{print_figure}
 
-      Ошибки (#{@game.errors_made}): #{errors}
+      Misses (#{@game.errors_made}): #{errors}
 
-      У вас осталось ошибок: #{@game.errors_allowed}
+      Attempts left: #{@game.errors_allowed}
     END
 
     if @game.won?
-      puts "Вы выиграли!"
+      puts "You Win!"
     elsif @game.lost?
-      puts "Вы проиграли"
-      puts "Загаданное слово #{@game.word}"
+      puts "You lose"
+      puts "The Word Was '#{@game.word.capitalize}'"
     end
   end
 
@@ -35,7 +35,7 @@ class ConsoleInterface
   end
 
   def get_letter
-    print "Введите букву: "
+    print "Enter Your Letter: "
     letter = STDIN.gets[0].upcase
     letter
   end
