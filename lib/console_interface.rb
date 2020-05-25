@@ -12,15 +12,12 @@ class ConsoleInterface
   end
 
   def print_game_status
-    puts <<~END
-      Word: #{print_word_status}
-
-      #{print_figure}
-
-      Misses (#{@game.errors_made}): #{errors}
-
-      Attempts left: #{@game.errors_allowed}
-    END
+    puts "WordWord: #{print_word_status}".colorize(:blue)
+    puts
+    puts print_figure.colorize(:yellow)
+    puts
+    puts "Misses (#{@game.errors_made}): #{errors}".colorize(:red)
+    puts "Attempts left: #{@game.errors_allowed}"
 
     if @game.won?
       puts "You Win!"
