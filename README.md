@@ -17,11 +17,13 @@ After each unsuccessful attempt to guess the letter, the next part of the gallow
 
 2. Get your terminal window into **hangman** derictory
 
-3. Run `ruby main.rb`
+3. Run
+
+```
+ruby main.rb
+```
 
 ### Adding new words to the game
 The app supports English and Russian
 
-Just add the words to the folder
-
-`/data/words.txt`
+Just add the words to the folder `/data/words.txt`
