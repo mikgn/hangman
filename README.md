@@ -1,6 +1,8 @@
+## Hangman
+
 ### Descriptioin
 
-About [Hangman](https://en.wikipedia.org/wiki/Hangman_(game))
+About  [Hangman](https://en.wikipedia.org/wiki/Hangman_(game))
 
 The player tries to guess the word in seven attempts
 
@@ -8,22 +10,25 @@ After each unsuccessful attempt to guess the letter, the next part of the gallow
 
 ### Requirements
 
- Ruby - any version
-
+Ruby - any version
 
 ### Getting Started
 
-1. Clone the **hangman** repository
+1.  Clone the  **hangman**  repository
 
-2. Get your terminal window into **hangman** derictory
+2.  Get your terminal window into  **hangman**  derictory
 
-3. Run
-
+3.  Install the exact gems and versions that are needed
 ```
-ruby main.rb
+bundle install
+```
+4. Run
+```
+bundle exec ruby main.rb
 ```
 
 ### Adding new words to the game
+
 The app supports English and Russian
 
-Just add the words to the folder `/data/words.txt`
+Just add the words to the folder  `/data/words.txt`
